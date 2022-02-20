@@ -5,11 +5,13 @@ contract AvalancheFileStorage {
     struct File {
         uint256 blockNumber;
         uint256 fileDate;
+        uint256 fileLength;
+        address owner;
         string fileName;
     }
-    File[] public files;
 
-    event Upload(uint256 indexed fileIndex, string indexed fileName, bytes fileContent);
+    event Upload(uint256 indexed fileIndex, string indexed fileName, address indexed owner, bytes fileContent);
+    File[] public files;
 
     function getAllFiles() public view returns(File[] memory) {
         return files;
@@ -23,7 +25,9 @@ contract AvalancheFileStorage {
         file.blockNumber = block.number;
         file.fileDate = block.timestamp;
         file.fileName = fileName;
+        file.owner = msg.sender;
+        file.fileLength = fileContent.length;
         files.push(file);
-        emit Upload(length, fileName, fileContent);
+        emit Upload(length, fileName, msg.sender, fileContent);
     }
 }
