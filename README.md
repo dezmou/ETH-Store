@@ -1,4 +1,4 @@
-# AVAX STORE
+# [AVAX STORE](https://avax-store.com)
 
 ### With avax store you can upload your files and engrave them forever to the Avalanche blockchain.
 

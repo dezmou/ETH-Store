@@ -49,16 +49,6 @@ function App() {
     await updateFileList();
   }
 
-  // const getFile = async () => {
-  //   const blockNumber = await contract.current.getBlockNumberOfFile(readName);
-  //   const filter = await contract.current.filters.Upload(readName)
-  //   const events = await contract.current.queryFilter(filter, parseInt(blockNumber), parseInt(blockNumber));
-  //   const res = events[0].args.fileContent
-  //   const buffer = hexStringToArrayBuffer(res);
-  //   const blob = new Blob([new Uint8Array(buffer, 0, buffer.length)])
-  //   saveAs(blob, readName)
-  // }
-
   const getFile = async (index) => {
     const file = files[index];
     const filter = await contract.current.filters.Upload();
@@ -142,7 +132,7 @@ function App() {
           display: "flex",
           justifyContent: "center",
           marginTop: "10px",
-          marginBottom: "40px",
+          marginBottom: "35px",
         }}>
           <div style={{
             fontSize: "2rem",
@@ -150,19 +140,37 @@ function App() {
             AVAX STORE
           </div>
         </div>
+        <div>
+
+          <div style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "35px",
+          }}>
+            <div style={{
+              marginRight: "10px",
+            }}>
+              <a href="https://snowtrace.io/address/0x0b7e73b7ac2430013dfd171c5e86ae9d0bf92a5a">Contract</a>
+            </div>
+            <div>
+              <a href="https://github.com/dezmou/Avax-Store"> Github</a>
+            </div>
+          </div>
+
+        </div>
 
         <div style={{
           fontSize: "1.2rem",
         }}>
-          <span style={{ fontSize: "1.4rem", fontWeight : "bold" }}>With avax store you can upload your files and engrave them forever to the Avalanche blockchain.</span><br /><br /><br />
+          <span style={{ fontSize: "1.4rem", fontWeight: "bold" }}>With avax store you can upload your files and engrave them forever to the <a href="https://www.avax.network/" >Avalanche blockchain</a>.</span><br /><br /><br />
           - Your file is redonded in thousands of nodes all over the world.<br />
           - Your file exists as long as the Avalanche blockchain exists.<br />
           - Nobody can delete or edit your file (not even you !).<br />
           - Everybody can download it without fees with this website or any Avalanche RPC endpoint.<br />
           - You can prove that you are the one who uploaded the file, and the upload date.<br />
-          - It cost less than $0.15 of transactions fees for each KB of data.<br /><br /><br />
+          - It cost less than $0.10 of transactions fees for each KB of data.<br /><br /><br />
 
-          <span style={{ fontSize: "1.3rem", fontWeight : "bold" }}>Why would you use AVAX STORE to engrave your file forever in the blockchain ?</span><br /><br />
+          <span style={{ fontSize: "1.3rem", fontWeight: "bold" }}>Why would you use AVAX STORE to engrave your file forever in the blockchain ?</span><br /><br />
           - I don't know.
 
         </div>
