@@ -129,6 +129,19 @@ function App() {
         maxWidth: "900px",
       }}>
         <div style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "10px",
+        }}>
+          <img src="./logo.png" style={{
+            width: "50px",
+            height: "50px",
+
+          }}></img>
+
+        </div>
+        <div style={{
           display: "flex",
           justifyContent: "center",
           marginTop: "10px",
@@ -137,7 +150,9 @@ function App() {
           <div style={{
             fontSize: "2rem",
           }}>
-            ETH STORAGE
+            <span style={{
+              // fontFamily : "impact",
+            }}>ETH FILE STORAGE</span>
           </div>
         </div>
         <div>
@@ -162,13 +177,13 @@ function App() {
         <div style={{
           fontSize: "1.2rem",
         }}>
-          <span style={{ fontSize: "1.4rem", fontWeight: "bold" }}>With eth store you can upload your files and engrave them forever to the Ethereum blockchain.</span><br /><br /><br />
+          <div style={{ fontSize: "1.4rem", fontWeight: "bold", textAlign: "center" }}>Upload your files and engrave them forever to the Ethereum blockchain.</div><br /><br /><br />
           - Your file is redonded in thousands of hard drives all over the world.<br />
           - Your file exists as long as the ethereum blockchain exists.<br />
           - Nobody can delete or edit your file (not even you !).<br />
           - Everybody can download it without fees with this website or any ethereum RPC endpoint.<br />
           - You can prove that you are the one who uploaded the file, and the upload date.<br />
-          - It cost something like 3$ for each KB of data<br /><br /><br />
+          - It cost something like 2$ to upload each KB of data<br /><br /><br />
 
         </div>
 

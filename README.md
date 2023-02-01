@@ -6,11 +6,6 @@
 - Your file is redonded in thousands of hard drives all over the world.
 - Your file exists as long as the Ethereum blockchain exists.
 - Nobody can delete or edit your file (not even you !).
-- Everybody can download it without fees with this website or any Avalanche RPC endpoint.
+- Everybody can download it without fees with this website or any ethereum RPC endpoint.
 - You can prove that you are the one who uploaded the file, and the upload date.
-- It cost less than $3 of transactions fees for each KB of data.
-
-
-### Why would you use AVAX STORE to engrave your file forever in the blockchain ?
-
-- I don't know.
+- It cost something like $2 of transactions fees to upload each KB of data.
