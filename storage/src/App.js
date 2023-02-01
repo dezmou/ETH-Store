@@ -178,7 +178,7 @@ function App() {
           fontSize: "1.2rem",
         }}>
           <div style={{ fontSize: "1.4rem", fontWeight: "bold", textAlign: "center" }}>Upload your files and engrave them forever to the Ethereum blockchain.</div><br /><br /><br />
-          - Your file is redonded in thousands of hard drives all over the world.<br />
+          - Your file is recorded in thousands of hard drives all over the world.<br />
           - Your file exists as long as the ethereum blockchain exists.<br />
           - Nobody can delete or edit your file (not even you !).<br />
           - Everybody can download it without fees with this website or any ethereum RPC endpoint.<br />
