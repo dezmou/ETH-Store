@@ -3,7 +3,7 @@ import { Contract, providers, signer, utils } from "ethers"
 import { saveAs } from 'file-saver';
 import moment from "moment";
 
-const CONTRACT = "0x0b7E73b7Ac2430013dfd171c5E86aE9D0bf92a5a";
+const CONTRACT = "0xd345c6a72b1D01282C5d31135e9Cc16Fe6Db330e";
 
 function buf2hex(buffer) {
   return [...new Uint8Array(buffer)]
@@ -78,18 +78,18 @@ function App() {
 
   const connectWallet = async () => {
     await provider.current.send("eth_requestAccounts", []);
-    await provider.current.send('wallet_addEthereumChain', [{
-      chainId: '0xA86A',
-      chainName: 'Avalanche Mainnet C-Chain',
-      nativeCurrency: {
-        name: 'Avalanche',
-        symbol: 'AVAX',
-        decimals: 18
-      },
-      rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
-      blockExplorerUrls: ['https://snowtrace.io/']
-    }]);
-    await provider.current.send('wallet_switchEthereumChain', [{ chainId: "0xA86A" }]);
+    // await provider.current.send('wallet_addEthereumChain', [{
+    //   chainId: '0xA86A',
+    //   chainName: 'Avalanche Mainnet C-Chain',
+    //   nativeCurrency: {
+    //     name: 'Avalanche',
+    //     symbol: 'AVAX',
+    //     decimals: 18
+    //   },
+    //   rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
+    //   blockExplorerUrls: ['https://snowtrace.io/']
+    // }]);
+    await provider.current.send('wallet_switchEthereumChain', [{ chainId: "0x1" }]);
     const signer = provider.current.getSigner();
     contract.current = new Contract(CONTRACT, [
       'function storeFile(string calldata fileName, bytes calldata fileContent) external',
@@ -137,7 +137,7 @@ function App() {
           <div style={{
             fontSize: "2rem",
           }}>
-            AVAX STORE
+            ETH STORAGE
           </div>
         </div>
         <div>
@@ -150,10 +150,10 @@ function App() {
             <div style={{
               marginRight: "10px",
             }}>
-              <a href="https://snowtrace.io/address/0x0b7e73b7ac2430013dfd171c5e86ae9d0bf92a5a">Contract</a>
+              <a href="https://etherscan.io/address/0xd345c6a72b1d01282c5d31135e9cc16fe6db330e">Contract</a>
             </div>
             <div>
-              <a href="https://github.com/dezmou/Avax-Store"> Github</a>
+              <a href="https://github.com/dezmou/ETH-Store"> Github</a>
             </div>
           </div>
 
@@ -162,16 +162,13 @@ function App() {
         <div style={{
           fontSize: "1.2rem",
         }}>
-          <span style={{ fontSize: "1.4rem", fontWeight: "bold" }}>With avax store you can upload your files and engrave them forever to the <a href="https://www.avax.network/" >Avalanche blockchain</a>.</span><br /><br /><br />
-          - Your file is redonded in thousands of nodes all over the world.<br />
-          - Your file exists as long as the Avalanche blockchain exists.<br />
+          <span style={{ fontSize: "1.4rem", fontWeight: "bold" }}>With eth store you can upload your files and engrave them forever to the Ethereum blockchain.</span><br /><br /><br />
+          - Your file is redonded in thousands of hard drives all over the world.<br />
+          - Your file exists as long as the ethereum blockchain exists.<br />
           - Nobody can delete or edit your file (not even you !).<br />
-          - Everybody can download it without fees with this website or any Avalanche RPC endpoint.<br />
+          - Everybody can download it without fees with this website or any ethereum RPC endpoint.<br />
           - You can prove that you are the one who uploaded the file, and the upload date.<br />
-          - It cost less than $0.10 of transactions fees for each KB of data.<br /><br /><br />
-
-          <span style={{ fontSize: "1.3rem", fontWeight: "bold" }}>Why would you use AVAX STORE to engrave your file forever in the blockchain ?</span><br /><br />
-          - I don't know.
+          - It cost something like 3$ for each KB of data<br /><br /><br />
 
         </div>
 
@@ -191,7 +188,7 @@ function App() {
             <div style={{
               fontWeight: "bold",
             }}>
-              You must use a RCP provider to use Web3 websites.
+              You must use a RCP provider to access list of uploaded files.
             </div>
           </div>
 
