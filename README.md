@@ -1,4 +1,4 @@
-# [ETH STORAGE](https://avax-store.com)
+# [ETH STORAGE](https://eth-storage.com)
 
 ### Upload your files and engrave them forever to the ethereum blockchain.
 
